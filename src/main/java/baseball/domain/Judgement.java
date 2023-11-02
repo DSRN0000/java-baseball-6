@@ -14,7 +14,12 @@ public class Judgement {
         return 0;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeNumber, int number){
-        return false;
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number){
+        return computer.get(placeIndex) == number;
+
+//        if (computer.get(placeIndex) == number){ // 이 코드를 위 한줄로 줄일 수 있다.
+//          return true;
+//        }
+//        return false;
     }
 }
