@@ -1,7 +1,9 @@
 package baseball;
 
+import baseball.domain.Judgement;
 import baseball.domain.NumberGenerator;
 
+import java.util.Arrays;
 import java.util.List;
 
 //(객체 지향 프로그래밍이란)
@@ -10,8 +12,12 @@ import java.util.List;
 //        (3) 각 결과를 종합한다.
 public class Application {
     public static void main(String[] args) {
-        final NumberGenerator generator = new NumberGenerator();
-        List<Integer> numbers = generator.createRandomNumbers();
-        System.out.println(numbers);
+//        final NumberGenerator generator = new NumberGenerator();
+//        List<Integer> numbers = generator.createRandomNumbers();
+//        System.out.println(numbers);
+
+        Judgement judgement = new Judgement();
+        final int count = judgement.correctCount(Arrays.asList(2, 8, 9), Arrays.asList(1, 2, 3));
+        System.out.println(count);
     }
 }
